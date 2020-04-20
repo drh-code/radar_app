@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_addtgt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Add Tgt" />
+
+                <Button
+                    android:id="@+id/btn_pulse"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pulse" />
+
+                <Button
+                    android:id="@+id/btn_cleartgts"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Clear Tgts" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNumTargets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No targets" />
+
+            <TextView
+                android:id="@+id/tvMaxRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Max Range:" />
+
+            <SeekBar
+                android:id="@+id/sbMaxRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000" />
+
+            <TextView
+                android:id="@+id/tvDutyCycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Duty Cycle:" />
+
+            <SeekBar
+                android:id="@+id/sbDutyCycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000" />
+
+            <TextView
+                android:id="@+id/tvSamples"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Samples: 50" />
+
+            <SeekBar
+                android:id="@+id/sbSamples"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="50" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/mpa_chart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+            </com.github.mikephil.charting.charts.LineChart>
+
+            <com.androidplot.xy.XYPlot
+                android:id="@+id/ap_test"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/cbShowTgts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Show Targets" />
+
+            <LinearLayout
+                android:id="@+id/loTgtList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"></LinearLayout>
+
+        </LinearLayout>
+
+</ScrollView>
